@@ -1,0 +1,117 @@
+    /* Reset & General Styles */
+    #home {
+  background: url("https://images.unsplash.com/photo-1503264116251-35a269479413?w=1200") 
+              no-repeat center center/cover;
+}
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    /* Navigation Bar */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        transition: 0.3s;
+        z-index: 1000;
+        background: black;
+    }
+    nav.scrolled {
+        background: rgba(0,0,0,0.85);
+        padding: 10px 30px;
+    }
+
+    /* Logo */
+    .logo {
+        font-family: 'Great Vibes', cursive;
+        font-size: 32px;
+        color: #ff4d6d;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    /* Navigation Links */
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+    ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+    ul li a:hover {
+        color: #ff4d6d;
+    }
+
+    /* Section Styles */
+    section {
+        min-height: 100vh;
+        padding: 100px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    #home {
+        background: linear-gradient(135deg, #cc5050, #795a65b2);
+    }
+    #about {
+        background: linear-gradient(135deg,#7c65b0, #f09cd8);
+    }
+    #services {
+        background: linear-gradient(135deg, #e15dbc,#7f95ec);
+    }
+    #contact {
+        background: linear-gradient(135deg, #88fa84, #4e4fb7);
+    }
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+    p {
+        max-width: 600px;
+        font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+        ul {
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 30px;
+            background: rgba(0,0,0,0.85);
+            padding: 15px;
+            display: none;
+        }
+        ul.active {
+            display: flex;
+        }
+        .menu-toggle {
+            display: block;
+            cursor: pointer;
+            color: white;
+            font-size: 26px;
+        }
+    }
+    @media (min-width: 769px) {
+        .menu-toggle {
+            display: none;
+        }
+    }
